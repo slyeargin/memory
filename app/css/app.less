@@ -1,10 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-  /* background-image: url('../media/bg.svg');
-  background-size: cover;
-  background-attachment: fixed; */
-
   padding: 25px;
 }
 
@@ -15,7 +11,9 @@ html, button, input, select, textarea,
 }
 
 #controls {
-  margin: 35px 0;
+  margin: 0 auto;
+  padding: 35px 0;
+  text-align:center;
 }
 
 h1 {
@@ -25,6 +23,7 @@ h1 {
 
 #game {
   text-align: center;
+  opacity: 0.5;
 }
 
 #clock {
@@ -32,11 +31,15 @@ h1 {
   display: inline-block;
 }
 
-#game > tbody > tr > td {
+#game {
+  margin: 0 auto;
+
+  tbody > tr > td {
   width: 100px;
   height: 150px;
   -webkit-perspective: 1000;
   padding: 0;
+
   .flipper {
     position: relative;
     width: 100%;
@@ -63,6 +66,7 @@ h1 {
       -webkit-transform: rotateY(180deg);
     }
   }
+}
 }
 
 .match, .rotate {

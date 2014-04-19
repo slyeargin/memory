@@ -11,6 +11,12 @@ html(lang='en')
 
     .pure-g
       .pure-u-1
+        #controls
+          button#start Start
+          #clock(data-time=15) 15
+
+    .pure-g
+      .pure-u-1
         table#game.pure-table.pure-table-bordered
           tbody
             - for (var i = 0; i < 4; i++)
@@ -20,10 +26,6 @@ html(lang='en')
                     .flipper
                       .front
                       .back
-
-    #controls
-      button#start Start
-      #clock(data-time=600) 600
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')

@@ -13,6 +13,7 @@
   }
 
   function startGame() {
+        $('#game').css('opacity', 1);
         generateArray();
         shuffleArray();
         loadArray();
@@ -79,9 +80,9 @@
   }
 
   function warning() {
-    var opacity = $('body').css('opacity')*1;
+    var opacity = $('#game').css('opacity')*1;
     opacity -= 0.1;
-    $('body').css('opacity', opacity);
+    $('#game').css('opacity', opacity);
   }
 
   function results() {
