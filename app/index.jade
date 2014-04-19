@@ -13,95 +13,17 @@ html(lang='en')
       .pure-u-1
         table#game.pure-table.pure-table-bordered
           tbody
-            tr
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-            tr
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-            tr
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-            tr
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-              td.card
-                .flipper
-                  .front A
-                  .back
-
+            - for (var i = 0; i < 5; i++)
+              tr
+                - for (var j = 0; j < 5; j++)
+                  td.card
+                    .flipper
+                      .front A
+                      .back
 
     #controls
       button#start Start
-      span#timer 60
+      span#timer(data-time=60) 60
 
     //- button#animate Animate
     //-
