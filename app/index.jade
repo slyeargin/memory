@@ -13,24 +13,17 @@ html(lang='en')
       .pure-u-1
         table#game.pure-table.pure-table-bordered
           tbody
-            - for (var i = 0; i < 5; i++)
+            - for (var i = 0; i < 4; i++)
               tr
                 - for (var j = 0; j < 5; j++)
                   td.card
                     .flipper
-                      .front A
+                      .front
                       .back
 
     #controls
       button#start Start
-      span#timer(data-time=60) 60
-
-    //- button#animate Animate
-    //-
-    //- #container
-    //-   .flipper
-    //-     .front A
-    //-     .back B
+      #clock(data-time=600) 600
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
