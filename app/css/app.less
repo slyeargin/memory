@@ -1,7 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
 body{
   padding: 25px;
+  background: #000;
 }
 
 html, button, input, select, textarea,
@@ -17,26 +19,50 @@ html, button, input, select, textarea,
 }
 
 h1 {
-  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
+  color: #e3a7da;
+  font-size: 3em;
 }
 
-#game {
-  text-align: center;
-  opacity: 0.5;
-}
+// #container {
+//   text-align: center;
+//   padding: 25px;
+//   background: #fff;
+//   margin: 0 auto;
+// }
+
 
 #clock {
   margin-left: 10px;
   display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #e3a7da;
+  font-size: 1.5em;
+}
+
+#start {
+  background: #e3a7da;
+  border-radius: 3px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 #game {
+  text-align: center;
   margin: 0 auto;
+
+  tbody {
+    background: #fff;
+  }
 
   tbody > tr > td {
   width: 100px;
-  height: 150px;
+  height: 100px;
   -webkit-perspective: 1000;
   padding: 0;
 
@@ -57,7 +83,7 @@ h1 {
     }
 
     .front {
-      background: #ff00ff;
+      background: #e3a7da;
       z-index: 2;
     }
 

@@ -13,7 +13,6 @@
   }
 
   function startGame() {
-        $('#game').css('opacity', 1);
         generateArray();
         shuffleArray();
         loadArray();
@@ -80,9 +79,7 @@
   }
 
   function warning() {
-    var opacity = $('#game').css('opacity')*1;
-    opacity -= 0.1;
-    $('#game').css('opacity', opacity);
+    $('#clock').css('color', '#ff0000');
   }
 
   function results() {
@@ -102,19 +99,21 @@
     console.log($matches);
     console.log(img1);
     console.log(img2);
+    console.log(flipCount);
 
     if (flipCount === 2){
       if (img1 === img2){
         $('.rotate').addClass('match');
         $('.rotate').removeClass('rotate');
-        $matches.off('click');
+        $('.match').off('click');
       } else {
         setTimeout(function(){
           $('.rotate').removeClass('rotate');
         }, 400);
       }
-      flipCount = 0;
     }
+
+    flipCount = 0;
   }
 
 
